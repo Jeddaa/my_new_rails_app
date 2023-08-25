@@ -9,16 +9,19 @@ const initialState = {
 };
 
 const URL = 'http://localhost:3000/api/greetings';
+
 export const fetchGreetings = createAsyncThunk(
   'services/fetchGreetings',
   async () => {
-    const response = await axios.get(URL);
-    const data = await response;
-    console.log('response', data);
-    return data;
+    try {
+      const response = await axios.get(URL);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching greetings:', error.message);
+      throw error;
+    }
   }
 );
-
 
 export const greetingSlice = createSlice({
   name: 'greeting',
