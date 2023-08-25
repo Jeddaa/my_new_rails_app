@@ -10,3 +10,10 @@ second_greeting = Greeting.create(greeting: "How do you do!")
 third_greeting = Greeting.create(greeting: "Bonjour!")
 fourth_greeting = Greeting.create(greeting: "Salam Alaykum!")
 fifth_greeting = Greeting.create(greeting: "Good morning!")
+# Greeting.create([
+#                  { greeting: 'Hello!' },
+#                  { greeting: 'Hi! Can I buy you some ice cream?' },
+#                  { greeting: 'Howdi! What brings you here today?' },
+#                  { greeting: 'Good evening! How may I be of service?' },
+#                  { greeting: 'Good morning!' }
+#                ])
